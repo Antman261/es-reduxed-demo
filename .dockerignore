@@ -1,0 +1,6 @@
+shared/http/node_modules
+server/node_modules
+server/build
+client/node_modules
+client/build
+README.md
