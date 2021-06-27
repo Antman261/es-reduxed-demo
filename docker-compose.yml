@@ -1,0 +1,33 @@
+version: "3.3"
+services:
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_USER: 'postgres'
+    ports:
+      - 5432:5432
+
+  server:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    environment:
+      Environment: 'local'
+      DatabaseHost: 'database'
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
+      - flyway
+
+  flyway:
+    image: flyway/flyway
+    command: -url=jdbc:postgresql://database/postgres migrate
+    environment:
+      FLYWAY_USER: 'postgres'
+      FLYWAY_PASSWORD: 'postgres'
+    volumes:
+      - ./db/migrations:/flyway/sql
+    depends_on:
+      - database

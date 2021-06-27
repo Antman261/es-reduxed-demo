@@ -1,0 +1,11 @@
+body {
+  background: #d9d9dd;
+}
+
+.card {
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.11);
+}
+
+.table, .table thead, .table thead > tr, .table thead > tr > th {
+  border-top: none;
+}

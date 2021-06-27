@@ -1,0 +1,15 @@
+{
+  "name": "http-schemas-webserver-example",
+  "version": "1.0.0",
+  "description": "An example webserver and client using http-schemas",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "./bootstrap.sh",
+    "start": "./start.sh"
+  },
+  "author": "",
+  "prettier": {
+    "singleQuote": true
+  },
+  "license": "ISC"
+}

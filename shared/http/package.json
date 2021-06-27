@@ -1,0 +1,36 @@
+{
+  "name": "api-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "types": "lib/index",
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -p .",
+    "start": "npx tsc -w -p ."
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "http-schemas": "^0.9.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2"
+  }
+}
