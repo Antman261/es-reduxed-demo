@@ -1,6 +1,4 @@
-CREATE SCHEMA polls_domain;
-
-CREATE TABLE "polls_domain"."event_store" (
+CREATE TABLE "event_store" (
     "id" BIGSERIAL PRIMARY KEY,
     "version" INT NOT NULL,
     "type" VARCHAR(64) NOT NULL,
@@ -26,6 +24,6 @@ $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER event_added
 AFTER INSERT
-ON polls_domain.event_store
+ON event_store
 FOR EACH ROW
 EXECUTE PROCEDURE notify_event_added()

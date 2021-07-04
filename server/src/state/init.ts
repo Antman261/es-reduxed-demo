@@ -7,7 +7,6 @@ import {store as reduxStore} from "./store.js";
 export const esInit = (async () => {
 
     const provider = createPostresEventStoreProvider<PollEvents>({
-        eventSchema: 'polls_domain',
         poolConfig,
     });
 

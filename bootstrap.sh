@@ -5,7 +5,7 @@ echo "${green}Welcome to Event Sourcing Reduxified Demo!"
 echo "Installing npm packages across client, server, and shared/http"
 echo "||----------------------------------------------------------||${reset}"
 mkdir -p server/build
-cd shared/http && npm i --ci && npm run build && cd ../../client && npm i --ci && npm run build && cd ../server && npm i --ci && npm run build
+cd shared/http && npm ci && npm run build && cd ../../client && npm i && npm run build && cd ../server && npm ci && npm run build
 echo "${green}"
 echo "||----------------------------------------------------------||"
 echo "Installation complete, here's the commands you need to know:"
