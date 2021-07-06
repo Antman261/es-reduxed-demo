@@ -6,6 +6,7 @@ export const poolConfig: PoolConfig = {
   password: process.env.DatabasePassword || 'postgres',
   host: process.env.DatabaseHost,
   database: process.env.DatabaseName || 'postgres',
+  port: parseInt(process.env.DatabasePort || '5432', 10),
 };
 
 console.log(poolConfig);
