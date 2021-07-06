@@ -15,3 +15,8 @@ export const esInit = (async () => {
         eventStoreProvider: provider,
     });
 })();
+
+(async () => {
+    console.log('event sourcing initialisation complete');
+    console.log((await esInit).meta);
+})();
