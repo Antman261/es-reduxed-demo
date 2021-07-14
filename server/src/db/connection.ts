@@ -7,6 +7,7 @@ export const poolConfig: PoolConfig = {
   host: process.env.DatabaseHost,
   database: process.env.DatabaseName || 'postgres',
   port: parseInt(process.env.DatabasePort || '5432', 10),
+  ssl: process.env.DatabaseUser ? true : false,
 };
 
 console.log(poolConfig);
